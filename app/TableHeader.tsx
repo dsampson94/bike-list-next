@@ -21,8 +21,7 @@ interface TableHeaderProps {
  * @param {Function} props.onSort - The function to call when the header is clicked to sort the column.
  */
 
-const TableHeader: React.FC<TableHeaderProps> = ({ label, currentSortKey, sortDirection, onSort }) => {
-    /**
+const TableHeader = ({ label, currentSortKey, sortDirection, onSort }: TableHeaderProps): React.ReactElement => {   /**
      * getSortIcon function
      *
      * This function determines the sort icon to display based on the current sort key and direction.

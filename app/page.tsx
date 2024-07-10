@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Bike } from '@/types/Bike';
 import TableHeader from '@/app/TableHeader';
+import Button from '@/app/Button';
 
 /**
  * Home component displays a list of bikes, allows searching by make or model,
@@ -11,7 +12,7 @@ import TableHeader from '@/app/TableHeader';
  * @component
  */
 
-const Home = () => {
+const Home = (): React.ReactElement => {
     const [bikes, setBikes] = useState<Bike[]>([]);
     const [searchTerm, setSearchTerm] = useState<string>('');
     const [sortKey, setSortKey] = useState<string>('');
@@ -77,17 +78,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
                 <h1 className="text-xl sm:text-2xl font-bold text-gray-950 mb-2 sm:mb-0">Bike List</h1>
                 <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
-                    <div className="p-[1px] bg-gray-500 rounded-xl shadow-sm">
-                        <div className="p-[1px] bg-gray-100 rounded-xl border-1 shadow-sm">
-                            <button
-                                className="relative px-4 py-2 bg-gradient-to-b from-[#e4e4e4] to-[#b3b3b3] text-[#5b5b5b]
-                                border-4 border-gray-300 rounded-xl font-bold shadow-sm"
-                            >
-                                CHECKOUT
-                                <div className="absolute inset-0 rounded-lg border-[1px] shadow-lg border-gray-500"/>
-                            </button>
-                        </div>
-                    </div>
+                    <Button label="CHECKOUT" />
                     <input
                         type="text"
                         placeholder="Search by make or model"
