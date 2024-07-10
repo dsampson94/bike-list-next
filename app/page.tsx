@@ -139,13 +139,13 @@ const Home = (): React.ReactElement => {
                     <tbody className="bg-white divide-y divide-gray-200">
                     {filteredBikes.map((bike) => (
                         <tr key={bike.BikeID} className="hover:bg-gray-100">
-                            <td className="px-4 py-2">{bike.Make}</td>
-                            <td className="px-4 py-2">{bike.Model}</td>
-                            <td className="px-4 py-2">{bike.Year}</td>
-                            <td className="px-4 py-2">{bike.Displacement}</td>
-                            <td className="px-4 py-2">{bike.Price}</td>
-                            <td className="px-4 py-2">{bike.Terrain}</td>
-                            <td className="px-4 py-2">
+                            <td className="px-4 py-2 text-center">{bike.Make}</td>
+                            <td className="px-4 py-2 text-center">{bike.Model}</td>
+                            <td className="px-4 py-2 text-center">{bike.Year}</td>
+                            <td className="px-4 py-2 text-center">{bike.Displacement}</td>
+                            <td className="px-4 py-2 text-center">{bike.Price}</td>
+                            <td className="px-4 py-2 text-center">{bike.Terrain}</td>
+                            <td className="px-4 py-2 text-center">
                                 <span className="block sm:hidden truncate max-w-[100px]">{bike.Description}</span>
                                 <span className="hidden sm:block">{bike.Description}</span>
                             </td>
