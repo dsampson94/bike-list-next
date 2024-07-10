@@ -73,11 +73,11 @@ const Home = () => {
     );
 
     return (
-        <div className="container mx-auto p-8 select-none">
-            <div className="flex justify-between items-center mb-4">
-                <h1 className="text-2xl font-bold text-gray-950">Bike List</h1>
-                <div className="flex items-center space-x-4">
-                    <div className="p-[1px] bg-gray-500 rounded-xl shadow-inner shadow-sm">
+        <div className="container mx-auto p-4 sm:p-8 select-none">
+            <div className="flex flex-col sm:flex-row justify-between items-center mb-4">
+                <h1 className="text-xl sm:text-2xl font-bold text-gray-950 mb-2 sm:mb-0">Bike List</h1>
+                <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                    <div className="p-[1px] bg-gray-500 rounded-xl shadow-sm">
                         <div className="p-[1px] bg-gray-100 rounded-xl border-1 shadow-sm">
                             <button
                                 className="relative px-4 py-2 bg-gradient-to-b from-[#e4e4e4] to-[#b3b3b3] text-[#5b5b5b]
@@ -93,11 +93,11 @@ const Home = () => {
                         placeholder="Search by make or model"
                         value={searchTerm}
                         onChange={handleSearch}
-                        className="p-2 border border-gray-300 rounded"
+                        className="p-2 border border-gray-300 rounded w-full sm:w-auto"
                     />
                 </div>
             </div>
-            <div className="overflow-auto bg-white rounded-lg shadow-md">
+            <div className="overflow-x-auto bg-white rounded-lg shadow-md">
                 <table className="min-w-full text-xs divide-y divide-gray-200 shadow-2xl">
                     <thead className="bg-gray-50">
                     <tr>
@@ -154,7 +154,10 @@ const Home = () => {
                             <td className="px-4 py-2">{bike.Displacement}</td>
                             <td className="px-4 py-2">{bike.Price}</td>
                             <td className="px-4 py-2">{bike.Terrain}</td>
-                            <td className="px-4 py-2">{bike.Description}</td>
+                            <td className="px-4 py-2">
+                                <span className="block sm:hidden truncate max-w-[100px]">{bike.Description}</span>
+                                <span className="hidden sm:block">{bike.Description}</span>
+                            </td>
                         </tr>
                     ))}
                     </tbody>
