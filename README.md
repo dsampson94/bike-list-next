@@ -27,7 +27,7 @@ Make sure you have the following installed on your local machine:
 
 1. Clone the repository:
 
-       git clone https://github.com/yourusername/bike-list.git
+       git clone https://github.com/dsampson94/bike-list-next.git
        cd bike-list
 
 2. Install the dependencies:
