@@ -32,9 +32,9 @@ Make sure you have the following installed on your local machine:
 
 2. Install the dependencies:
 
-       npm run dev
+       npm install
        # or
-       yarn dev
+       yarn install
 
 ### Running the Application
 
